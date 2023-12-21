@@ -1,0 +1,23 @@
+﻿@model EmployeeViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create Employee</h1>
+<br />
+<hr />
+
+<form asp-action="Create" enctype="multipart/form-data">
+    <partial name="PartialViews/_CreateUpdatePartial" model="@Model" />
+
+    <input type="submit" value="Create" class="btn btn-primary" /> |
+    <input type="reset" value="Clear" class="btn btn-secondary" /> |
+    <a class="btn btn-dark" asp-action="Index">Back To List</a>
+
+</form>
+
+@section validationSection{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
